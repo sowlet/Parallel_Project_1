@@ -1,5 +1,5 @@
 import scala.util.Random
-import scala.collection.parallel.CollectionConverters._
+// import scala.collection.parallel.CollectionConverters._
 
 object PageRank {
     /**
@@ -18,7 +18,7 @@ object PageRank {
         Map() // TODO: remove this stub and implement this method
     }
 
-    def pagerank(pages: Map[String, WebPage]): Map[String, Double] = {
-        Map() // TODO: remove this stub and implement this method
+    def pagerank(pages: Map[String, WebPage]): List[RankedWebPage] = {
+        List() // TODO: remove this stub and implement this method
     }
 }
