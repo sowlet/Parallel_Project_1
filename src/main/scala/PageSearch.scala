@@ -8,7 +8,11 @@ object PageSearch {
      * @return       a list of the number of times any of the terms appeared in each page in the same order as given
      */
     def count(pages: List[RankedWebPage], query: List[String]): List[Double] = {
-        List() // TODO: implement this method and remove this stub
+        for page <- pages yield {
+            val text = page.text.toLowerCase.split(" ")
+            val count = query.map(term => text.count(_ == term.toLowerCase)).sum
+            count.toDouble
+        }
     }
 
     /**
